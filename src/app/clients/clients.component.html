@@ -1,0 +1,31 @@
+<div class='card'>
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+
+    <div class='table-responsive'>
+        <table class='table'
+             *ngIf='clients && clients.length'>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let client of clients'>
+                    <td>{{ client.id }}</td>
+                    <td>{{ client.nombre }}</td>
+                    <td>{{ client.celular }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>
