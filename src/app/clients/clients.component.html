@@ -11,7 +11,7 @@
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Teléfono</th>
-                    
+                    <th>Accion</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +19,14 @@
                     <td>{{ client.id }}</td>
                     <td>{{ client.nombre }}</td>
                     <td>{{ client.celular }}</td>
+                    <td class="text-nowrap text-center">        
+                        <a data-toggle="tooltip" 
+                            data-original-title="ver"
+                            (click)="VerDetalle(client)"
+                            class="cursor"> 
+                            <i class="fa fa-eye text-danger"></i> 
+                        </a>
+                    </td>
                 </tr>
             </tbody>
         </table>
