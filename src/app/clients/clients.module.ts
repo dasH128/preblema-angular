@@ -15,7 +15,7 @@ import { ClientComponent } from './client/client.component';
     RouterModule.forChild([
       { path: 'clients', component: ClientsComponent },
       {
-        path: 'clients/:id',
+        path: 'clients/cliente/:id',
         component: ClientComponent
       }
     ]),

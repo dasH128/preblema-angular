@@ -1,4 +1,5 @@
 export interface IClient {
+    id: number;
     productId: number;
     productName: string;
     productCode: string;
